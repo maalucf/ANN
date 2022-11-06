@@ -4,6 +4,7 @@ import math
 def richardson(col1):
     col1 = [item for item in col1]
     n = len(col1)
+    
     for j in range(n - 1):
         temp_col = [0] * (n-1-j)
         for i in range(n - 1 - j):
