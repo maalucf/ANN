@@ -27,9 +27,9 @@ if __name__ == '__main__':
     def f(x, y):
         return y * (2 - x) + x + 1
     
-    x0, y0 = 0.3492, 0.75895
-    h = 0.1148 
-    n = 10
+    x0, y0 = 1.68087, 0.64147
+    h = 0.1724 
+    n = 15
     #r1 = true_euler(f, x0, y0, h, n) #euler
     #print(r1)
     #x1, y1 = zip(*r1)

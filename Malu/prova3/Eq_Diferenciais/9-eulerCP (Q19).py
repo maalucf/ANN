@@ -30,9 +30,9 @@ if __name__ == '__main__':
         # y = P
         return k*y
     # t == x
-    x0, y0 = 0.0, 1763761 # x0 = t, y0 = individuos
+    x0, y0 = 0.0, 1551939 # x0 = t, y0 = individuos
     h = 0.0625
-    k = 0.0648
+    k = 0.09088
     n = int(1 / h)
     r1 = true_euler(f, k, x0, y0, h, n)
     #print(r1)

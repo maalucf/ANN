@@ -14,10 +14,12 @@ def heun(f,x0,y0,h,n):
     return r
 
 def f(x,y):
-    return y*(2-x)+x+1
+    return y * (2 - x) + x + 1
 
-x0, y0 = 0.967, 2.757
-e = heun(f,x0,y0, h=0.196,n=10)
+x0, y0 = 1.23727, 2.51764
+h = 0.14929
+n = 15
+e = heun(f,x0,y0, h,n)
 
 for xi, yi in e:
-    print(xi, yi)
+    print(yi, end = ",")

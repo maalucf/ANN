@@ -4,10 +4,10 @@ import numpy as np
 '''
 Seja Pn(x) o polinômio de Legendre de grau n. Encontre os coeficientes da combinação linear
 g(x)=∑i=112ciPi(x)
-que melhor se aproxima da função f(x)=xcos(10x2e−x2) no intervalo [−1,1]. Para o cálculo dos coeficientes ci, use a regra de Simpson com n=128 subintervalos. Em seguida calcule g(x) para os seguintes valores de x
-x1=−0.923, x2=−0.083 e x3=0.711.
-A função g(x) é uma aproximação para a função f(x) no intervalo [−1,1] com erro dado por
-erro=∫1−1[f(x)−g(x)]2dx.
+que melhor se aproxima da função f(x)=xcos(10x2e-x2) no intervalo [-1,1]. Para o cálculo dos coeficientes ci, use a regra de Simpson com n=128 subintervalos. Em seguida calcule g(x) para os seguintes valores de x
+x1=-0.923, x2=-0.083 e x3=0.711.
+A função g(x) é uma aproximação para a função f(x) no intervalo [-1,1] com erro dado por
+erro=∫1-1[f(x)-g(x)]2dx.
 Use o método da quadratura gaussiana com 10 nós para determinar o erro.
 '''
 
@@ -153,7 +153,7 @@ def build_legendre_polynomial(n):
 
 
 def f(x):
-    return x * math.cos(10 * x**2 * math.exp(-x**2))
+    return x**2 * math.exp(x) * math.sqrt(math.log(2 + math.cos(-x**2)))
 
 
 if __name__ == '__main__':
@@ -400,12 +400,12 @@ if __name__ == '__main__':
     # values = [-0.901, -0.051, 0.44]
     # method = ['trapz', 256]
 
-    grau = 12
-    funcs = [build_legendre_polynomial(i) for i in range(grau)]
-    a = -1
-    b = 1
-    values = [-0.915, -0.206, 0.673]
-    method = ['simps', 128]
+    grau = 9
+    funcs = [lambda x: 1, lambda x: x, lambda x: x**2, lambda x: x**3, lambda x: x**4, lambda x: x**5, lambda x: x**6, lambda x: x**7, lambda x: x**8]
+    a = -2.09176
+    b = 0.91029
+    values = [-1.3341, -0.41252, 0.39015]
+    method = ['simps', 256]
 
     #grau = 8
     #funcs = [build_legendre_polynomial(i) for i in range(grau)]
@@ -436,7 +436,7 @@ if __name__ == '__main__':
         print(f'g({x}) = {g(x)}')
 
     # quadratura gaussina
-    exact_for_degree_less_than = 20
+    exact_for_degree_less_than = 8
 
     def func_erro(x):
         return (f(x) - g(x))**2

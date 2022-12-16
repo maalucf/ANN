@@ -19,14 +19,14 @@ def euler_mid(f, k, x0, y0, h, n):
 
 if __name__ == '__main__':
     def f(x, y, k):
-        return k*y + 86225  # valor de v
+        return k*y + 89537  # valor de v
     
-    x0, y0 = 0.0, 1795811 # x0 = t, y0 = individuos
+    x0, y0 = 0.0, 1729743 # x0 = t, y0 = individuos
     h = 0.0625
-    k = 0.0999 # gama
+    k = 0.04956 # gama
     n = int(1 / h)
     #true_euler(f, k, x0, y0, h, n)
 
     r2 = euler_mid(f, k, x0, y0, h, n)
     x2, y2 = zip(*r2)
-    print(y2)
+    print(y2) #última resposta

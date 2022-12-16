@@ -18,12 +18,13 @@ def heun(f,x0,y0,h,n):
 
 #Q9 Prova:
 def f(x,y):
-    Lambda = 0.0439
-    v = 26303 
+    Lambda = 0.09073
+    v = 33184
     return Lambda * y - v
 
-x0, y0 = 0 , 1370025
-e = heun(f,x0,y0, h=0.0625,n=int(1/0.0625))
+x0, y0 = 0 , 1455981
+h = 0.0625
+e = heun(f,x0,y0, h,n=int(1/0.0625))
 
 for xi, yi in e:
-    print(xi, yi)
+    print(xi, yi) #última resposta

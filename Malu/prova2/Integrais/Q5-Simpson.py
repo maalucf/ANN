@@ -25,10 +25,10 @@ def simpsPonto(x, y):
 
 #funcao
 def f(x):
-    return math.sqrt(math.sin(math.cos(math.log(x**2 + 1) + 2) + 3) + 4)
+    return x**2 * math.exp(x) * math.sqrt(math.log(2 + math.cos(-x**2)))
 
-intervalo = [-1.483, 1.369]
-subintervalos = [8, 12, 38, 54, 88, 114, 126, 164, 178, 216, 274]
+intervalo = [-2.15061, 0.97599]
+subintervalos = [2, 2, 4, 8, 16, 32, 64, 128, 256]
 
 n = len(subintervalos)
 for i in range(n):

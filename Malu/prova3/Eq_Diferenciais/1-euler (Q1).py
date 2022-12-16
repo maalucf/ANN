@@ -6,19 +6,20 @@ def euler(f, x0, y0, h, n):
     result = []
     for i in range(n):
         y0 += f(x0, y0) * h
-        x0 += h
+        x0 += h*(i+1)
         result.append([x0, y0])
-        print(x0,y0)
+        print(y0, end = ", ")
+        #print(x0,y0)
         # print(f'x_{i+1} = {x0} \t||\t y_{i+1} = {y0}')
     return result
 
 if __name__ == '__main__':
 
     def f(x, y):
-        return y*(1 - x) + x + 2
+        return  y * (2 - x) + x + 1
 
-    x0, y0 = 1.223, 1.14 
-    h = 0.125 
+    x0, y0 = 1.42807, 2.27298
+    h = 0.125
     n = 10
 
     #P3.7

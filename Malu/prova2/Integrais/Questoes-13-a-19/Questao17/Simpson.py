@@ -31,7 +31,7 @@ def simpsPonto(x, y):
 #y = [0, 102, 230, 359, 506, 670, 818, 965, 1088, 1203, 1325, 1466, 1630, 1826, 2046, 2316, 2594, 2901, 3201]
 
 intervalo = [0, 12]
-subintervalos = [14]
+subintervalos = [4,256]
 
 n = len(subintervalos)
 for i in range(n):
